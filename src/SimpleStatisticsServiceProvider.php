@@ -2,10 +2,30 @@
 
 namespace Fligno\SimpleStatistics;
 
+use Fligno\SimpleStatistics\Models\Statistics;
+use Fligno\SimpleStatistics\Observers\StatisticsObserver;
+use Fligno\SimpleStatistics\Policies\StatisticsPolicy;
+use Fligno\SimpleStatistics\Repositories\StatisticsRepository;
 use Fligno\StarterKit\Providers\BaseStarterKitServiceProvider;
 
 class SimpleStatisticsServiceProvider extends BaseStarterKitServiceProvider
 {
+    protected array $morph_map = [
+        'statistics' => Statistics::class,
+    ];
+
+    protected array $observer_map = [
+        StatisticsObserver::class => Statistics::class,
+    ];
+
+    protected array $policy_map = [
+        StatisticsPolicy::class => Statistics::class,
+    ];
+
+    protected array $repository_map = [
+        StatisticsRepository::class => Statistics::class,
+    ];
+
     /**
      * Register any package services.
      *

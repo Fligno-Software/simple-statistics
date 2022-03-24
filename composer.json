@@ -23,7 +23,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Fligno\\SimpleStatistics\\": "src/"
+            "Fligno\\SimpleStatistics\\": "src/",
+            "Database\\Factories\\": "database/factories",
+            "Database\\Seeders\\": "database/seeders"
         }
     },
     "autoload-dev": {
@@ -39,6 +41,10 @@
             "aliases": {
                 "SimpleStatistics": "Fligno\\SimpleStatistics\\Facades\\SimpleStatistics"
             }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.0.x-dev"
         }
     }
 }

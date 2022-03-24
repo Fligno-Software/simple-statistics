@@ -1,7 +1,6 @@
 <?php
 
+use Fligno\SimpleStatistics\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('test', function () {
-    return 'test';
-});
+Route::apiResource('statistics', StatisticsController::class)->only(['show', 'index']);
