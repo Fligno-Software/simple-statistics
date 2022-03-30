@@ -33,8 +33,8 @@ return new class extends Migration
             $table->string('sub_type')->nullable();
             $table->text('description')->nullable();
             $table->text('data');
-            $table->dateTime('start_at')->nullable();
-            $table->dateTime('end_at')->nullable();
+            $table->timestamp('start_at')->nullable();
+            $table->timestamp('end_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

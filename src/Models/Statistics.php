@@ -49,8 +49,8 @@ class Statistics extends Model
 
     protected $casts = [
         'data' => AsCollection::class,
-        'start_at' => 'datetime',
-        'end_at' => 'datetime',
+        'start_at' => 'timestamp',
+        'end_at' => 'timestamp',
     ];
 
     /******** RELATIONSHIPS ********/
